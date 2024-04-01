@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+</head>
+<body>
+    <h2>Account Activation</h2>
+    <p>Dear {{ user.username }},</p>
+    <p>Please click the following link to activate your account:</p>
+    <p><a href="{{ domain }}{% url 'verify_email' uid token %}">Activate Account</a></p>
+    <p>Thank you!</p>
+</body>
+</html>
